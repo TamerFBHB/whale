@@ -1,0 +1,43 @@
+@use "../../SASS/Main" as * ;
+
+.navbar{
+@include size(100%,80px);
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(128, 128, 128, 0.323);
+    z-index: 100;
+}
+.nav{
+    @include flex(space-between ,center);
+    @include size(100%,100%);
+    padding-left: 136px;
+    padding-right: 136px;
+}
+.nav img{    
+    border: 3px solid #000000;
+    border-radius: 5px;
+    padding: 2px;
+}
+.nav .logo{
+    @include flex(center,center);
+    gap: 5px;
+}
+.nav .logo h2{
+    font-size: 14px;
+    color: $text-Color;
+}
+.nav .links{
+    @include flex(end,center);
+    gap: 20px;
+}
+.nav .links a{
+    color: $text-Color;
+    font-size: 14px;
+    font-weight: 600;
+}
+.nav .links .demo{
+    color: $main-color;
+    border: 2px solid $main-color;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+}

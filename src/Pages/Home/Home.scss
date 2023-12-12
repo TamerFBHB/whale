@@ -1,0 +1,62 @@
+@use "../../SASS/Main" as * ;
+
+.home{
+    @include size(100% , calc(100vh - 80px));
+    background-image: url(../../images/wave.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.home .inform{
+    @include size(100% , 100% );
+    @include flex(center,center);
+    flex-direction: column;
+    gap: 10px;
+}
+.home .inform h1{
+    font-size: 40px;
+}
+.home .inform h1:first-child{
+    color: $main-color;
+}
+.home .inform h1:nth-child(2){
+    letter-spacing: 1px;
+}
+.home .inform h6{
+    font-size: 15px;
+    font-weight: 800;
+    color: #000000;
+}
+.home .inform .email{
+    position: relative;
+}
+.home .inform .email input{
+    text-align: center;
+    background-color: $main-color;
+    outline: none;
+    border: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    
+}
+:placeholder-shown{
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 14px;
+}
+.home .inform .email .arrow{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    border: 10px solid ;
+    border-color: transparent transparent transparent black;
+}
+.home .inform .last{
+    font-size: 10px;
+}
+.home .laptop{
+    width: 50%;
+}
