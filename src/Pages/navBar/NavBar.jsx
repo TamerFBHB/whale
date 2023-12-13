@@ -3,7 +3,7 @@ import logo from "../../images/Logo.png"
 import "./NavBar.scss"
 import { NavLink } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({open , openState}) => {
     return (
         <div className='navbar '>
             <div className='nav'>
@@ -19,6 +19,13 @@ const NavBar = () => {
                         Create Demo Generating Assets
                     </div>
                 </div>
+                
+                <div className='bar' onClick={()=>{open === 0? openState(1) : openState(0)}}>
+                    <div className={`one ${open === 1? "closeOne":""}`}></div>
+                    <div className={`two ${open === 1? "hide":"apeare"}`}></div>
+                    <div className={`three ${open === 1? "closethree":""}`}></div>
+                </div>
+                
             </div>
         </div>
     );

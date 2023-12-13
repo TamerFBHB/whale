@@ -2,11 +2,11 @@
 
 .home{
     @include size(100% , calc(100vh - 80px));
+    min-height: calc(100vh - 80px);
     background-image: url(../../images/wave.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 .home .inform{
     @include size(100% , 100% );
@@ -19,6 +19,9 @@
 }
 .home .inform h1:first-child{
     color: $main-color;
+    text-align: start;
+    width: 50%;
+    margin-left: 5%;
 }
 .home .inform h1:nth-child(2){
     letter-spacing: 1px;
@@ -59,4 +62,44 @@
 }
 .home .laptop{
     width: 50%;
+}
+
+
+// mobile media 
+@media (max-width:992px){
+    .home .inform h1:first-child{
+        width: 70%;
+        margin-left: 0%;
+    }
+}
+@media (max-width:768px){
+    .home .inform h1:first-child{
+        width: 80%;
+        margin-left: 5%;
+    }
+    .home .laptop{
+        width: 80%;
+    }
+}
+@media (max-width:420px) {
+    .home .inform{
+        gap: 15px;
+    }
+    .home .inform h1:first-child{
+        width: 69%;
+        font-size: 25px;
+        text-align: center;
+        margin-left: 0%;
+    }
+    .home .inform h1{    
+        width: 95%;    
+        font-size: 25px;
+        text-align: center;
+    }
+    .home .inform p{
+        text-align: center;
+    }
+    .home .laptop{
+        width: 100%;
+    }
 }

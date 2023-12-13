@@ -4,7 +4,7 @@
 @include size(100%,80px);
     background-color: white;
     box-shadow: 0px 1px 10px rgba(128, 128, 128, 0.323);
-    z-index: 100;
+    z-index: 1000;
 }
 .nav{
     @include flex(space-between ,center);
@@ -40,4 +40,57 @@
     border-radius: 8px;
     padding: 10px 20px;
     font-weight: 600;
+}
+
+//bar menu
+.bar{
+    @include size(25px,25px);
+    @include flex-col ;
+    align-items: end;
+    margin-right: 35px;
+    display: none;
+    direction: rtl;
+}
+.bar .one, .two ,.three{
+    background-color: $main-color;
+    @include size(100% , 2px) ;
+    transition: 0.3s;
+}
+.bar  .two ,.three{
+    margin-top: 6px;
+}
+
+.closeOne{
+    transform: rotate(50deg);    
+    margin-top: 8px;
+}
+.closethree{
+    transform: rotate(125deg);
+    margin-top: -1px;
+}
+.hide{
+    display: none;
+}
+.apeare{
+    display: block
+}
+// mobile media
+@media (max-width:992px) {
+    .nav{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width:768px) {
+    .nav .links{
+        display: none;
+    }
+    .nav .bar{
+        display: block;
+    }
+}
+@media (max-width:420px){
+    .nav .links .demo{
+        padding: 10px 15px;
+    }
 }
