@@ -1,0 +1,232 @@
+@use "../../SASS/Main" as * ;
+
+.BookDemos{
+    @include size(100% , 100vh);
+    min-height: 100vh;
+    @include flex(center,center);
+    position: relative;
+    flex-direction: column;
+    padding: 50px 0;
+    background-image: url(../../images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.TitleDemos{
+    @include flex(center,center);
+    color: $text-Color ;
+}
+.TitleDemos h1{
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+.TitleDemos h2{
+    color: $main-color;
+    width: 200px;
+    margin-left: 5px;
+    font-size: 50px;
+    text-align: center;
+}
+.BookDemos p{
+    text-align: center;
+    font-size: 16px;
+    color: $text-Color ;
+}
+
+.book-demos{
+    @include flex(center,center);
+    flex-wrap: wrap;
+    padding: 20px 150px;
+}
+
+.book-demos .inform-template{
+    @include flex(start,start);
+    @include size(50% , 100%);
+    flex-direction: column;
+    flex-basis: 250px;
+    flex-grow: 1;
+    color: $text-Color ;
+}
+.book-demos .inform-template h1{
+    font-size: 45px;
+}
+.book-demos .inform-template p{
+    width: 80%;
+    font-size: 18px;
+    text-align: start;
+    margin: 10px 0;
+}
+
+.book-demos .inform-template .feature li {
+    @include size(100% , 50px);
+    padding: 20px 0;
+    @include flex(start,center);
+    margin-top: 20px;
+    gap: 20px;
+}
+.book-demos .inform-template .feature li h6{
+    font-size: 18px;
+    font-weight: 800;
+    color: $text-Color ;
+}
+.book-demos .inform-template .feature li img{
+    @include size(30px , 30px);
+}
+.book-demos .gif-template{
+    @include size(50% , 100%);
+    @include flex(center,center);
+    height: 70vh;
+    width: 250px;
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+.book-demos .gif-template img{
+    @include size(100% , 100%);
+}
+.BookDemos .sbar{
+    position: absolute;
+    left: 1%;
+    bottom: 2%;
+}
+.BookDemos .buble{
+    position: absolute;
+}
+.BookDemos .b-one{
+    left: 2%;
+    bottom: 25%;
+    width: 20px;
+}
+.BookDemos .b-two{
+    left: 2%;
+    bottom: 20%;
+    width: 15px;
+}
+.BookDemos .b-three{
+    left: 1%;
+    bottom: 15%;
+    width: 15px;
+}
+.BookDemos .b-four{
+    left: 4%;
+    bottom: 20%;
+    width: 15px;
+}
+
+// mpbile screen 
+@media (max-width:992px) {
+    .BookDemos{
+        padding: 10px 0;
+    }
+
+    .TitleDemos h1{
+        font-size: 40px;
+    }
+    .TitleDemos h2{
+        font-size: 40px;
+        width: 100px;
+    }
+    .BookDemos p{
+        font-size: 14px;
+    }
+    
+    .book-demos{
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    .book-demos .inform-template{
+        @include flex(start,center);
+        @include size(100% , 50%);
+    }
+    .book-demos .inform-template h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .book-demos .inform-template p{
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .book-demos .inform-template .feature li {
+        @include size(100% , 50px);
+        padding: 20px 0;
+        @include flex(start,center);
+        margin-top: 10px;
+    }
+    .book-demos .inform-template .feature li h6{
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .book-demos .gif-template{
+        @include size(100% , 50%);
+        @include flex(center,center);
+    }
+    .book-demos .gif-template img{
+        @include size(90% , 100%);
+    }
+}
+
+
+@media (max-width:420px){
+    .TitleDemos h1{
+        font-size: 20px;
+        letter-spacing: 1px;        
+        letter-spacing: 0.5px;
+    }
+    .TitleDemos h2{
+        font-size: 20px;
+    }
+    .BookDemos p{
+        font-size: 12px;
+    }
+    .book-demos .inform-template h1{
+        font-size: 20px;
+    }
+    .book-demos .inform-template p{
+        width: 95%;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .book-demos .inform-template .feature li {
+        @include size(95% , 40px);
+        margin-top: 5px;
+        gap: 15px;
+    }
+    .book-demos .inform-template .feature li h6{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .book-demos .inform-template .feature li img{
+        @include size(25px , 25px);
+    }
+    .book-demos .gif-template{
+        height: 50%;
+        margin-top: 15px;
+        align-items: end;
+    }
+    .book-demos .gif-template img{
+        @include size(90% , 90%);
+    }
+    .BookDemos .b-one{
+        left: 8%;
+        bottom: 25%;
+        width: 20px;
+    }
+    .BookDemos .b-two{
+        left: 12%;
+        bottom: 20%;
+        width: 15px;
+    }
+    .BookDemos .b-three{
+        left: 1%;
+        bottom: 15%;
+        width: 15px;
+    }
+    .BookDemos .b-four{
+        left: 8%;
+        bottom: 22%;
+        width: 15px;
+    }
+}

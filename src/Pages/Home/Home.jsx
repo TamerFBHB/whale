@@ -18,11 +18,13 @@ const Home = () => {
                             1200,
                             'Create Personalized Images',
                             1200,
+                            'Create Personalized PDFs',
+                            1200,
                             'Create Personalized Memes',
-                            1200
+                            1200,
                         ]}
                         wrapper="span"
-                        speed={30}
+                        speed={50}
                         style={{ display: 'inline-block' }}
                         repeat={Infinity}
                     />

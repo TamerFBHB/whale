@@ -151,7 +151,7 @@
         width: 50%;
     }
     .asets .rectangle{
-        left: 35%;
+        display: none;
     }
     .asets .turtle{
         left: 5%;
@@ -175,9 +175,7 @@
         font-size: 35px;        
         padding: 5px 15px;
     }
-    .asets .rectangle{
-        display: none;
-    }
+
     .asets .turtle{
         left: 10%;
     }

@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import NavBar from '../navBar/NavBar';
 import Asets from '../asets/Asets';
 import SmallNavBar from '../SmallNavBar/SmallNavBar';
+import BookDemos from '../BookDemos/BookDemos';
 
 
 const MainPage = () => {
@@ -16,6 +17,7 @@ const MainPage = () => {
             <SmallNavBar open={open} openState={openState} />
             <Home />
             <Asets />
+            <BookDemos />
         </div>
     );
 }
