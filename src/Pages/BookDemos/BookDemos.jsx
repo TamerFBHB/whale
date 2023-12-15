@@ -5,6 +5,8 @@ import template from "../../images/GIF-1.png"
 import right from "../../images/right.png";
 import sbar from "../../images/sbar.png";
 import buble from "../../images/big-bubeles.png";
+import deep from "../../images/deep sea.png"
+import fishGif from "../../images/gifFish.png"
 
 const BookDemos = () => {
     return (
@@ -80,6 +82,8 @@ const BookDemos = () => {
             <img src={buble} alt='' className='buble b-three'/>
             <img src={buble} alt='' className='buble b-four'/>
             </div>
+            <img src={deep} alt='' className='deep' />
+            <img src={fishGif} alt='' className='fish-G' />
         </div>
     );
 }

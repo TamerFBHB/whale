@@ -3,14 +3,10 @@
 .BookDemos{
     @include size(100% , 100vh);
     min-height: 100vh;
-    @include flex(center,center);
+    @include background-image("../../images/background.png");
+    @include flex-col(center,center);
     position: relative;
-    flex-direction: column;
-    padding: 50px 0;
-    background-image: url(../../images/background.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // padding: 80px 0;
 }
 .TitleDemos{
     @include flex(center,center);
@@ -40,18 +36,18 @@
 }
 
 .book-demos .inform-template{
-    @include flex(start,start);
+    @include flex-col(start,start);
     @include size(50% , 100%);
-    flex-direction: column;
     flex-basis: 250px;
     flex-grow: 1;
     color: $text-Color ;
 }
 .book-demos .inform-template h1{
-    font-size: 45px;
+    font-size: 40px;
+    width: 100%;
 }
 .book-demos .inform-template p{
-    width: 80%;
+    width: 100%;
     font-size: 18px;
     text-align: start;
     margin: 10px 0;
@@ -75,18 +71,21 @@
 .book-demos .gif-template{
     @include size(50% , 100%);
     @include flex(center,center);
-    height: 70vh;
     width: 250px;
     flex-basis: 250px;
     flex-grow: 1;
+    padding: 0;
 }
-.book-demos .gif-template img{
-    @include size(100% , 100%);
+.fish-G{
+    position: absolute;
+    right: 0;
+    top: 25%;
 }
 .BookDemos .sbar{
     position: absolute;
     left: 1%;
     bottom: 2%;
+    z-index: 5;
 }
 .BookDemos .buble{
     position: absolute;
@@ -111,7 +110,11 @@
     bottom: 20%;
     width: 15px;
 }
-
+.deep{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 // mpbile screen 
 @media (max-width:992px) {
     .BookDemos{
@@ -131,7 +134,7 @@
     
     .book-demos{
         flex-direction: column;
-        padding: 20px 10px;
+        padding: 10px ;
     }
     
     .book-demos .inform-template{
@@ -170,12 +173,12 @@
 
 @media (max-width:420px){
     .TitleDemos h1{
-        font-size: 20px;
-        letter-spacing: 1px;        
+        font-size: 20px;       
         letter-spacing: 0.5px;
     }
     .TitleDemos h2{
         font-size: 20px;
+        width: 75px;
     }
     .BookDemos p{
         font-size: 12px;

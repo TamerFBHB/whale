@@ -3,10 +3,7 @@
 .home{
     @include size(100% , calc(100vh - 80px));
     min-height: calc(100vh - 80px);
-    background-image: url(../../images/wave.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background-image("../../images/wave.png");
 }
 .home .inform{
     @include size(100% , 100% );
@@ -35,13 +32,11 @@
     position: relative;
 }
 .home .inform .email input{
+    @include input;
     text-align: center;
     background-color: $main-color;
-    outline: none;
-    border: none;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 10px 20px;
     
 }
 :placeholder-shown{
@@ -56,6 +51,7 @@
     transform: translateY(-50%);
     border: 10px solid ;
     border-color: transparent transparent transparent black;
+    cursor: pointer;
 }
 .home .inform .last{
     font-size: 10px;

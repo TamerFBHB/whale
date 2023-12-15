@@ -5,6 +5,7 @@ import NavBar from '../navBar/NavBar';
 import Asets from '../asets/Asets';
 import SmallNavBar from '../SmallNavBar/SmallNavBar';
 import BookDemos from '../BookDemos/BookDemos';
+import Transform from '../transform/Transform';
 
 
 const MainPage = () => {
@@ -18,6 +19,7 @@ const MainPage = () => {
             <Home />
             <Asets />
             <BookDemos />
+            <Transform />
         </div>
     );
 }

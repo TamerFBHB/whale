@@ -3,14 +3,12 @@
 @keyframes FromRight {
     0%{
         transform: translateX(50px);
-        
+        opacity: 0;
     }
     100%{
         transform: translateX(0px);
+        opacity: 1;
     }
-}
-@mixin FromRight($duration){
-    animation: FromRight $duration linear 1 forwards ;
 }
 
 //#########################
@@ -19,48 +17,42 @@
 @keyframes FromLeft {
     0%{
         transform: translateX(-50px);
-        
+        opacity: 0;
     }
     100%{
         transform: translateX(0px);
         opacity: 1;
     }
 }
-    @mixin FromLeft($duration){
-        animation: FromLeft $duration linear 1 forwards ;
-    }
+
 //#########################
 
 //FromBottom
 @keyframes FromBottom {
     0%{
         transform: translateY(50px);
-        
+        opacity: 0;
     }
     100%{
         transform: translateY(0px);
         opacity: 1;
     }
 }
-@mixin FromBottom($duration,$delay){
-    animation: FromBottom $duration $delay linear 1 forwards ;
-}
+
 //#########################
 
 //FromTop
 @keyframes FromTop {
     0%{
         transform: translateY(-100px);
-        
+        opacity: 0;
     }
     100%{
         transform: translateY(0px);
         opacity: 1;
     }
 }
-@mixin FromTop($duration){
-    animation: FromTop $duration linear 1 forwards ;
-}
+
 //#########################
 
 //FadeIn
@@ -71,10 +63,6 @@
     100%{
         opacity: 1;
     }
-}
-
-@mixin FadeIn($duration,$delay){
-    animation: FadeIn $duration $delay linear 1 forwards ;
 }
 
 //#########################
@@ -89,16 +77,13 @@
     }
 }
 
-.FadeOut{
-    animation: FadeOut 1s linear 1 forwards ;
-}
-
 //#########################
 
-//Scale
-@keyframes Scale {
+//zoomIn
+@keyframes zoomIn {
     0%{
         transform:scale(0.7);
+        opacity: 0;
     }
     100%{
         transform:scale(1);
@@ -106,8 +91,37 @@
     }
 }
 
-@mixin zoomIn($duration,$delay){
-    animation: Scale $duration $delay linear 1 forwards ;
+//#########################
+
+//zoomOut
+@keyframes zoomOut {
+    0%{
+        transform:scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform:scale(0.7);
+        opacity: 0;
+    }
+}
+
+//#########################
+//animation for close button
+
+@keyframes span {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+//#########################
+
+@mixin animation($animation,$delay){
+    animation: animation 0.5s $delay linear 1 forwards ;
 }
 
 
@@ -127,16 +141,6 @@
 }
 
 //#########################
-//animation for close button
 
-@keyframes span {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-    
-}
 
 

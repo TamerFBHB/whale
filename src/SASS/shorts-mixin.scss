@@ -1,0 +1,58 @@
+
+//1- flex
+@include flex($horiental , $vertical);
+
+//2- flex & column
+@include flex-col($horiental , $vertical);
+
+//3- grid-column
+@include grid-cols($col);
+
+//4- grid-row
+@include grid-cols($row);
+
+//5-  create circle
+@include circle($dimention);
+
+//6- create width & height
+@include size($w,$h);
+
+// 7- position absolute center
+@include center;
+
+// 8- background image
+@include background-image($url);
+
+// 9- input without border & outline & padding:
+@include input;
+
+// 10- blur
+@include blur-color($color);
+
+// 11- animation gradient background with hover must write 3 color ($clr1 0% , $clr2 51% , $clr3 100%)
+@include animation-gradient-hover( $clr1, $clr2 , $clr3 );
+
+// 12-  animation border color with background gradient must write (width , height , background-color-1 ,background-color-2 , border-color-1 ,border-color-2)
+@include animation-border ($w , $h ,$background-color-1 , $background-color-2 , $border-color-1 ,$border-color-2);
+
+  // 13- animation gradient background infinite must write 4 color ($clr1 , $clr2 , $clr3 ,$clr4)
+@include animation-gradient-infinite($clr1, $clr2 , $clr3 , $clr4);
+
+  // 14-  parallax Effect  صفحه بتتحرك على خلفيه ثابته
+@include parallax ($url) ;
+
+  //15 change background-color when hover from top
+@include change-clr-top ($clr1, $clr2);
+
+//16 change background-color when hover from left
+@include change-clr-left($clr1, $clr2);
+
+//17- text graidient
+@include text-gradient($direction , $font , $clr1, $clr2);
+
+//18- make Reacticon bold
+@include icon-Bold($w , $colo);
+
+//  animation ( FromRight - FromLeft - FromBottom - FromTop - FadeIn - FadeOut - zoomIn - span )
+@include animation($animation,$delay);
+

@@ -40,13 +40,17 @@
     border-radius: 8px;
     padding: 10px 20px;
     font-weight: 600;
+    transition: 0.5s;
+    &:hover{
+        background-color: $main-color;
+        color: white ;
+    }
 }
 
 //bar menu
 .bar{
     @include size(25px,25px);
-    @include flex-col ;
-    align-items: end;
+    @include flex-col(center ,end) ;
     margin-right: 35px;
     display: none;
     direction: rtl;

@@ -1,0 +1,33 @@
+@use "../../SASS/Main" as *;
+
+.sestar{
+    @include size(80px,90px);
+    position: relative;
+}
+.star{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.one{
+    @include center;
+}
+.two{
+    z-index: 2;
+    @include size(100%,100%);
+    background-color: transparent;
+}
+.three{
+    z-index: 3;
+    @include size(100%,100%);
+    background-color: transparent;
+    @include center;
+}
+.four{
+    z-index: 4;
+    @include center;
+}
+.five{
+    z-index: 5;
+    @include center;
+}
