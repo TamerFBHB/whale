@@ -68,7 +68,7 @@
   backdrop-filter: blur(5px);
 }
 
-// 11- animation gradient background with hover
+// 11- animation gradient background with hover must write 4 color ($clr1 , $clr2 , $clr3 ,$clr4)
 @mixin animation-gradient-hover($clr1, $clr2, $clr3) {
   background-image: linear-gradient(to right, $clr1 0%, $clr2 51%, $clr3 100%);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -80,7 +80,26 @@
   }
 }
 
-// 12-  animation border color
+// 12- animation gradient background infinite must write 4 color ($clr1 , $clr2 , $clr3 ,$clr4)
+@mixin animation-gradient-infinite($clr1, $clr2, $clr3, $clr4) {
+  background: linear-gradient(-45deg, $clr1, $clr2, $clr3, $clr4);
+  background-size: 600%;
+  animation: anime 16s linear infinite;
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// 13-  animation border color
 @mixin animation-border(
   $w,
   $h,
@@ -111,25 +130,6 @@
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
-}
-
-// 13- animation gradient background infinite must write 4 color ($clr1 , $clr2 , $clr3 ,$clr4)
-@mixin animation-gradient-infinite($clr1, $clr2, $clr3, $clr4) {
-  background: linear-gradient(-45deg, $clr1, $clr2, $clr3, $clr4);
-  background-size: 600%;
-  animation: anime 16s linear infinite;
-}
-
-@keyframes anime {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 // 14-  parallax Effect  صفحه بتتحرك على خلفيه ثابته
@@ -176,8 +176,8 @@
     font-size: $font;
 }
 
-//18-  make Reacticon bold
-@mixin icon-Bold($w , $colo){
+//18-  make React icon bold
+@mixin icon-Bold($w , $color){
   stroke-width: $w;
-  stroke: $colo;
+  stroke: $color;
 }

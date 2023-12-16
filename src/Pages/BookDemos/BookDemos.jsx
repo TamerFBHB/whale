@@ -72,15 +72,15 @@ const BookDemos = () => {
                     </ul>
                 </div>
                 <div className='gif-template'>
-                    <img src={template} alt='' className='temp'/>
+                    <img src={template} alt='' className='temp' />
                 </div>
             </div>
-            <img src={sbar} alt='' className='sbar'/>
+            <img src={sbar} alt='' className='sbar' />
             <div className='bubles'>
-            <img src={buble} alt='' className='buble b-one'/>
-            <img src={buble} alt='' className='buble b-two'/>
-            <img src={buble} alt='' className='buble b-three'/>
-            <img src={buble} alt='' className='buble b-four'/>
+                <img src={buble} alt='' className='buble b-one' />
+                <img src={buble} alt='' className='buble b-two' />
+                <img src={buble} alt='' className='buble b-three' />
+                <img src={buble} alt='' className='buble b-four' />
             </div>
             <img src={deep} alt='' className='deep' />
             <img src={fishGif} alt='' className='fish-G' />

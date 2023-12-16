@@ -5,6 +5,7 @@
     @include size(100% , 100vh);
     @include background-image("../../images/background.png");
     padding: 50px 0;
+    overflow: hidden
 }
 .title-transform{
     @include flex-col(center,center);
@@ -12,7 +13,11 @@
 }
 .transform h1{
     font-size: 50px;
+    text-align: center;
     color: $text-Color ;
+}
+.transform p{
+    text-align: center;
 }
 .group-1{
     position: absolute;
@@ -36,9 +41,11 @@
 }
 .inputMail h2{
     color: $text-Color ;
+    text-align: center
 }
 .inputMail .inputs{
     @include flex(center,center);
+    flex-wrap: wrap;
     gap: 10px;
 }
 .inputMail .inputs input{
@@ -244,4 +251,135 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 25px;
+}
+
+@media (max-width:992px) {
+    
+.transform{
+    padding: 30px 0;
+}
+.transform h1{
+    font-size: 40px;
+}
+.group-1{
+    bottom: 5%;
+}
+.blueFish{
+    top: 60%;
+}
+//card sales
+.card-mail-sales{
+    top: 50%;
+    left: 5%;
+    transform: rotate(-5deg);
+}
+//follow me
+.card-mail-Follow{
+    top: 40%;
+}
+//manager
+
+.card-mail-manager{
+    top: 50%;
+    right: 5%;
+    transform: rotate(5deg);
+}
+}
+@media (max-width:420px) {
+    .transform h1{
+        font-size: 20px;
+    }
+    .transform p{
+        font-size: 12px;
+    }
+    .group-1{
+        bottom: 5%;
+        width: 20%;
+    }
+    .blueFish{
+        top: 60%;
+        width: 30%;
+    }
+    //card-mail-sarah
+.card-mail-sarah{
+    @include size(175px ,100px);
+    top: 18%;
+    left: 0%;
+    transform: rotate(-2deg);
+}
+.card-mail-sarah .head-card-mail .mail h5{
+    font-size: 12px
+}
+.card-mail-sarah .body-card-mail h5{
+    font-size: 12px;
+}
+    //card-mail-tomas
+    .card-mail-tomas{
+        @include size(175px ,100px);
+        top: 18%;
+        right: 0%;
+        transform: rotate(2deg);
+    }
+    .card-mail-tomas .body-card-mail h5{
+        font-size: 12px;
+    }
+
+    .card-mail-tomas .head-card-mail .mail h5{
+        font-size: 12px
+    }
+    //card sales
+    .card-mail-sales{
+        @include size(200px ,100px);
+        top: 46%;
+        left: 0%;
+        transform: rotate(-5deg);
+    }
+    .card-mail-sales .head-card-mail .mail h5{
+        font-size: 12px
+    }
+    .card-mail-sales .body-card-mail h6{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .card-mail-sales .head-card-mail{
+        margin-bottom: 8px;
+    }
+    //follow me
+    .card-mail-Follow{
+        @include size(200px ,100px);
+    }
+    .card-mail-Follow .head-card-mail .mail h5{
+        font-size: 12px
+    }
+    .card-mail-Follow .body-card-mail h6{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .card-mail-Follow .head-card-mail{
+        margin-bottom: 8px;
+    }
+    //manager
+    
+    .card-mail-manager{
+        @include size(200px ,100px);
+        top: 45%;
+        right: 0%;
+        transform: rotate(5deg);
+    }
+    .card-mail-manager .head-card-mail .mail h5{
+        font-size: 12px
+    }
+    .card-mail-manager .body-card-mail h6{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .card-mail-manager .head-card-mail{
+        margin-bottom: 8px;
+    }
+    .inputMail h2{
+        font-size: 20px;
+    }
+    .inputs{
+        align-items: start;
+    }
 }
